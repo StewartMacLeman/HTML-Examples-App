@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Nav = ({getTitles, clearH2}) => {
   return (
     <aside className="navAside">
-      <nav className="">
+      <nav className="nav">
         <ul>
           <li className="topic subtitle" onClick={clearH2}>
             <Link to="/">Home</Link>
