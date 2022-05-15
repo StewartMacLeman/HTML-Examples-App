@@ -1,0 +1,22 @@
+table {
+    margin: 1rem auto;
+}
+caption {
+font-family: verdana, helvetica, sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0.15rem;
+  background-color: none;
+}
+/* thead, tfoot {
+    background-color: coral;
+}
+.example2, .example3, .example4To9 {
+    border: .15rem solid black;
+}
+.example3 th, .example3 td, .example4To9 th, .example4To9 td {
+    border: .15rem solid black;
+}
+.example4To9 {
+    border-collapse: collapse;
+} */

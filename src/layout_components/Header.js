@@ -1,10 +1,10 @@
 import React from "react";
 
-const Header = () => {
+const Header = ({topic, subTopic}) => {
   return (
     <header className="header">
         <h1>HTML Examples</h1>
-        <h2>Topic: Sub-topic</h2>
+        {topic && <h2>{topic}{subTopic}</h2>}
     </header>
   )
 }

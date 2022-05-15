@@ -4,11 +4,11 @@ import Nav from "./Nav";
 import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
 
-const Layout = () => {
+const Layout = ({topic, subTopic, getTitles, clearH2}) => {
   return (
     <>
-      <Header />
-      <Nav />
+      <Header topic={topic} subTopic={subTopic} />
+      <Nav getTitles={getTitles} clearH2={clearH2}/>
       <Outlet />
       <Footer />
     </>

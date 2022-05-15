@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./layout_components/Layout";
 import Home from "./pages/Home";
@@ -14,10 +14,30 @@ import LISTS_3 from "./pages/02_lists/LISTS_3";
 import Missing from "./pages/Missing";
 
 const App = () => {
+  const [topic, setTopic] = useState("");
+  const [subTopic, setSubTopic] = useState("");
+
+  const clearH2 = () => {
+    setTopic("");
+    setSubTopic("");
+  }
+
+  const getTitles = (e) => {
+    let itemClicked = e.target
+    let topicSelected = itemClicked.parentElement.parentElement.querySelector(".topic").textContent;
+    let subTopicSelected = itemClicked.textContent
+    // ---------------------------
+    console.log(itemClicked);
+    console.log(topicSelected);
+    console.log(subTopicSelected);
+    // ---------------------------
+    setTopic(topicSelected + ": ");
+    setSubTopic(subTopicSelected);
+  }
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Layout topic={topic} subTopic={subTopic} getTitles={getTitles} clearH2={clearH2} />}>
         {/* ----------------------------- */}
           <Route index element={<Home />} />
           <Route path="tables">
@@ -30,7 +50,7 @@ const App = () => {
             <Route path="ex_2" element={<LISTS_2 />} />
             <Route path="ex_3" element={<LISTS_3 />} />
           </Route>
-          <Route path="*" element={<Missing />} />
+          <Route path="*" element={<Missing clearH2={clearH2} />} />
           {/* ----------------------------------- */}
         </Route>
       </Routes>

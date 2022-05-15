@@ -10,42 +10,46 @@ html {
 }
 body {
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   height: 100vh;
 }
 #root {
-  flex: 1;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 20% 70% 10%;
   width: 100%;
+  height: 100%;
 }
 
 h1 { font-size: 3rem; }
 h2 { font-size: 2.5rem; }
-h3 { font-size: 2.25rem; }
+h3 { font-size: 2.15rem; }
 p { font-size: 2rem; }
-label, input { font-size: 2rem; }
-span { font-size: 1.5rem; }
+/* label, input { font-size: 2rem; } */
+/* span { font-size: 1.5rem; } */
 button { font-size: 1.5rem; }
+li { font-size: 1.5rem; }
+code { font-size: 1.5rem; }
+th, td { font-size: 2rem; }
 
 h1, h2, h3, p, label, input, span {
   font-family: verdana, helvetica, sans-serif;
   text-align: center;
   margin: 0 auto;
-  padding: .15rem;
+  padding: 0.15rem;
   background-color: none;
 }
 /* Button styles. --------------------------------------------- */
 button {
   font-family: verdana, helvetica, sans-serif;
   text-align: center;
-  margin: .2rem auto;
+  margin: 0.2rem auto;
   color: white;
   background-color: black;
-  border: .15rem solid white;
-  box-shadow: 0 0.15rem black, 0 -0.15rem black, 0.15rem 0 black, -0.15rem 0 black;
-  border-radius: .5rem;
-  padding: .15rem .25rem;
+  border: 0.15rem solid white;
+  box-shadow: 0 0.15rem black, 0 -0.15rem black, 0.15rem 0 black,
+    -0.15rem 0 black;
+  border-radius: 0.5rem;
+  padding: 0.15rem 0.25rem;
 }
 button:hover {
   color: black;
@@ -55,40 +59,99 @@ button:hover {
 /* Header styles. --------------------------------------------- */
 .header {
   width: 100%;
-  margin: 0 auto .75rem;
-  padding-bottom: .25rem;
+  margin: 0 auto 0.75rem;
+  padding-bottom: 0.25rem;
   /* background-color: cornflowerblue; */
   background-color: var(--palegreen);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
 }
-.header h1, .header h2 {
-  text-shadow: 0 0.15rem white, 0 -0.15rem white, 0.15rem 0 white, -0.15rem 0 white;
+.header h1,
+.header h2 {
+  text-shadow: 0 0.15rem white, 0 -0.15rem white, 0.15rem 0 white,
+    -0.15rem 0 white;
+}
+/* Navigation styles. ---------------------------------------- */
+.navAside {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  border: 0.15rem solid blue;
+  overflow-y: scroll;
+}
+.navAside .subtitle, .navAside .title {
+  background-color: pink;
+}
+/* Main styles. ---------------------------------------------- */
+.main {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  border: 0.15rem solid red;
+  padding: .25rem;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+.main h3 {
+  text-align: left;
+  text-decoration: underline;
+  margin-bottom: .5rem;
+}
+.main pre {
+  margin: 0 auto;
 }
 /* Footer styles. -------------------------------------------- */
 .footer {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
   width: 100%;
-  height: 10%;
-  margin: 1.5rem auto 0;
-  /* padding-top: 1rem;
-  padding-bottom: 2rem; */
+  margin: 1rem auto 0;
   /* background-color: cornflowerblue; */
   background-color: var(--palegreen);
-  position: fixed;
-  bottom: 0px;
-  /* display: flex;
-  justify-content: center; */
 }
 /* Media queries. -------------------------------------------- */
 @media screen and (min-width: 801px) {
-  html { font-size: 12px; }
-  body { width: 80%; }
+  html {
+    font-size: 12px;
+  }
+  body {
+    width: 80%;
+  }
 }
 @media screen and (max-width: 800px) {
-  html { font-size: 12px; }
+  html {
+    font-size: 12px;
+  }
 }
 @media screen and (max-width: 500px) {
-  html { font-size: 8px; }
-  button { border-radius: .4rem; }
+  html {
+    font-size: 10px;
+  }
+  button {
+    border-radius: 0.4rem;
+  }
 }
-@media screen and (max-width: 400px) and (max-height: 700px) {
-  /* .footer { height: 15%; } */
+@media screen and (max-width: 400px) and (max-width: 700px) {
+  #root {
+    grid-template-columns: 100%;
+    grid-template-rows: 12.5% 25% 52.5% 10%;
+  }
+  .header {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  .navAside {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  .main {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  .footer {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
 }
