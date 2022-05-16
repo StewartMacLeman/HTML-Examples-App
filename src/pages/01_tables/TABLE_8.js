@@ -1,8 +1,11 @@
 import React from "react";
 
-const TABLE_3 = () => {
+const TABLE_8 = () => {
 const htmlCode =
 `<table>
+  <caption>
+    This is the Caption!
+  </caption>
   <tr>
     <th>Header 1</th>
     <th>Header 2</th>
@@ -13,16 +16,23 @@ const htmlCode =
     <td>R1: Cell B</td>
     <td>R1: Cell C</td>
   </tr>
+  <tr>
+    <td colspan="3">Spanned Cell</td>
+  </tr>
 </table>`;
 const cssCode =
-`table, th, td {
-  border: .15rem solid black; 
+`caption {
+  font-size: 1.5rem;
+  margin-bottom: .5rem; 
 }`
   
     return (
       <main className="main">
         <h3>The Output:</h3>
-        <table className="tableBorder">
+        <table className="tableBorder collapse">
+            <caption>
+              This is the Caption!
+            </caption>
           <tbody>
             <tr>
               <th>Header 1</th>
@@ -33,6 +43,9 @@ const cssCode =
               <td>R1: Cell A</td>
               <td>R1: Cell B</td>
               <td>R1: Cell C</td>
+            </tr>
+            <tr>
+            <td colSpan="3">Spanned Cell</td>
             </tr>
           </tbody>
         </table>
@@ -52,4 +65,4 @@ const cssCode =
     );
 };
 
-export default TABLE_3;
+export default TABLE_8;

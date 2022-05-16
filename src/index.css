@@ -31,7 +31,7 @@ li { font-size: 1.5rem; }
 code { font-size: 1.5rem; }
 th, td { font-size: 2rem; }
 
-h1, h2, h3, p, label, input, span, li {
+h1, h2, h3, p, label, input, span, li, th, td {
   font-family: verdana, helvetica, sans-serif;
   text-align: center;
   margin: 0 auto;

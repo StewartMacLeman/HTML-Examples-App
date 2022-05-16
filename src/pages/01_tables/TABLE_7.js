@@ -1,28 +1,38 @@
 import React from "react";
 
-const TABLE_3 = () => {
+const TABLE_7 = () => {
 const htmlCode =
 `<table>
+  <colgroup>
+    <col />
+    <col />
+    <col style="background-color: lightblue" />
+  </colgroup>   
   <tr>
     <th>Header 1</th>
     <th>Header 2</th>
     <th>Header 3</th>
   </tr>
   <tr>
-    <td>R1: Cell A</td>
-    <td>R1: Cell B</td>
-    <td>R1: Cell C</td>
+      <td rowspan="2">Spanned Cell</td>
+      <td>R1: Cell A</td>
+      <td>R1: Cell B</td>
+  </tr>
+  <tr>
+      <td>R2: Cell A</td>
+      <td>R2: Cell B</td>
   </tr>
 </table>`;
-const cssCode =
-`table, th, td {
-  border: .15rem solid black; 
-}`
   
     return (
       <main className="main">
         <h3>The Output:</h3>
-        <table className="tableBorder">
+        <table className="tableBorder collapse">
+            <colgroup>
+              <col />
+              <col />
+              <col style={{backgroundColor: "lightblue"}} />
+            </colgroup>
           <tbody>
             <tr>
               <th>Header 1</th>
@@ -30,9 +40,13 @@ const cssCode =
               <th>Header 3</th>
             </tr>
             <tr>
+              <td rowSpan="2">Spanned Cell</td>
               <td>R1: Cell A</td>
               <td>R1: Cell B</td>
-              <td>R1: Cell C</td>
+            </tr>
+            <tr>
+              <td>R2: Cell A</td>
+              <td>R2: Cell B</td>
             </tr>
           </tbody>
         </table>
@@ -42,14 +56,8 @@ const cssCode =
             <code>{htmlCode}</code>
           </pre>
         </div>
-        <h3>The CSS:</h3>
-        <div>
-          <pre>
-            <code>{cssCode}</code>
-          </pre>
-        </div>
       </main>
     );
 };
 
-export default TABLE_3;
+export default TABLE_7;

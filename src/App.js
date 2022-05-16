@@ -6,6 +6,12 @@ import Home from "./pages/Home";
 import TABLE_1 from "./pages/01_tables/TABLE_1";
 import TABLE_2 from "./pages/01_tables/TABLE_2";
 import TABLE_3 from "./pages/01_tables/TABLE_3";
+import TABLE_4 from "./pages/01_tables/TABLE_4";
+import TABLE_5 from "./pages/01_tables/TABLE_5";
+import TABLE_6 from "./pages/01_tables/TABLE_6";
+import TABLE_7 from "./pages/01_tables/TABLE_7";
+import TABLE_8 from "./pages/01_tables/TABLE_8";
+import TABLE_9 from "./pages/01_tables/TABLE_9";
 // -----------------------------
 import LISTS_1 from "./pages/02_lists/LISTS_1";
 import LISTS_2 from "./pages/02_lists/LISTS_2";
@@ -27,9 +33,9 @@ const App = () => {
     let topicSelected = itemClicked.parentElement.parentElement.querySelector(".topic").textContent;
     let subTopicSelected = itemClicked.textContent
     // ---------------------------
-    console.log(itemClicked);
-    console.log(topicSelected);
-    console.log(subTopicSelected);
+    // console.log(itemClicked);
+    // console.log(topicSelected);
+    // console.log(subTopicSelected);
     // ---------------------------
     setTopic(topicSelected + ": ");
     setSubTopic(subTopicSelected);
@@ -42,8 +48,14 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="tables">
             <Route index element={<TABLE_1 />} />
-            <Route path="ex_2" element={<TABLE_2 />} />
-            <Route path="ex_3" element={<TABLE_3 />} />
+            <Route path="with_th_tags" element={<TABLE_2 />} />
+            <Route path="cell_borders" element={<TABLE_3 />} />
+            <Route path="border_collapse" element={<TABLE_4 />} />
+            <Route path="colspan" element={<TABLE_5 />} />
+            <Route path="rowspan" element={<TABLE_6 />} />
+            <Route path="colgroup" element={<TABLE_7 />} />
+            <Route path="caption" element={<TABLE_8 />} />
+            <Route path="semantics" element={<TABLE_9 />} />
           </Route>
           <Route path="lists">
             <Route index element={<LISTS_1 />} />

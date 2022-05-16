@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import TablesNav from "./nav_sections/TablesNav";
+import ListsNav from "./nav_sections/ListsNav";
 
-const Nav = ({getTitles, clearH2}) => {
+const Nav = ({ getTitles, clearH2 }) => {
   return (
     <aside className="navAside">
       <nav className="nav">
@@ -10,30 +12,8 @@ const Nav = ({getTitles, clearH2}) => {
             <Link to="/">Home</Link>
           </li>
         </ul>
-        <ul>
-          <li className="topic subtitle">Tables</li>
-          <li onClick={getTitles}>
-            <Link to="tables">Missing th tags</Link>
-          </li>
-          <li onClick={getTitles}>
-            <Link to="tables/ex_2">Example 2</Link>
-          </li>
-          <li onClick={getTitles}>
-            <Link to="tables/ex_3">Example 3</Link>
-          </li>
-        </ul>
-        <ul>
-          <li className="topic subtitle">Lists</li>
-          <li onClick={getTitles}>
-            <Link to="lists">Example 1</Link>
-          </li>
-          <li onClick={getTitles}>
-            <Link to="lists/ex_2">Example 2</Link>
-          </li>
-          <li onClick={getTitles}>
-            <Link to="lists/ex_3">Example 3</Link>
-          </li>
-        </ul>
+        <TablesNav getTitles={getTitles} />
+        <ListsNav getTitles={getTitles} />
       </nav>
     </aside>
   );

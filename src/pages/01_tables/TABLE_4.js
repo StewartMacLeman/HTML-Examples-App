@@ -1,6 +1,6 @@
 import React from "react";
 
-const TABLE_3 = () => {
+const TABLE_4 = () => {
 const htmlCode =
 `<table>
   <tr>
@@ -16,13 +16,14 @@ const htmlCode =
 </table>`;
 const cssCode =
 `table, th, td {
-  border: .15rem solid black; 
+  border: .15rem solid black;
+  border-collapse: collapse; 
 }`
   
     return (
       <main className="main">
         <h3>The Output:</h3>
-        <table className="tableBorder">
+        <table className="tableBorder collapse">
           <tbody>
             <tr>
               <th>Header 1</th>
@@ -52,4 +53,4 @@ const cssCode =
     );
 };
 
-export default TABLE_3;
+export default TABLE_4;
