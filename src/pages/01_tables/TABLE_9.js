@@ -6,6 +6,7 @@ const htmlCode =
   <caption>
     This is the Caption!
   </caption>
+
   <thead>
     <tr>
       <th>Header 1</th>
@@ -13,6 +14,7 @@ const htmlCode =
       <th>Header 3</th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <td>R1: Cell A</td>
@@ -20,6 +22,7 @@ const htmlCode =
       <td>R1: Cell C</td>
     </tr>
   </tbody>
+  
   <tfoot>
     <tr>
       <td colSpan="3">Spanned Cell</td>

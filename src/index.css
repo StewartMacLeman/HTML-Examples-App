@@ -30,8 +30,9 @@ button { font-size: 1.5rem; }
 li { font-size: 1.5rem; }
 code { font-size: 1.5rem; }
 th, td { font-size: 2rem; }
+dt, dd { font-size: 2rem; }
 
-h1, h2, h3, p, label, input, span, li, th, td {
+h1, h2, h3, p, label, input, span, li, th, td, dt, dd {
   font-family: verdana, helvetica, sans-serif;
   text-align: center;
   margin: 0 auto;
@@ -163,7 +164,7 @@ button:hover {
 @media screen and (max-width: 400px) and (max-width: 700px) {
   #root {
     grid-template-columns: 100%;
-    grid-template-rows: 12.5% 25% 52.5% 10%;
+    grid-template-rows: 17.5% 25% 52.5% 5%;
   }
   .header {
     grid-column: 1 / 2;

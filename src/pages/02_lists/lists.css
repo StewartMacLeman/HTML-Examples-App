@@ -1,0 +1,23 @@
+.list li, .list dt, .list dd {
+  text-align: left;
+}
+.listStyle {
+  list-style-type: none;
+}
+dt, dd { font-size: 2rem; }
+
+dt, dd {
+  font-family: verdana, helvetica, sans-serif;
+  /* text-align: center; */
+  margin: 0 auto;
+  padding: 0.15rem;
+  background-color: none;
+}
+dt {
+  font-weight: bold;
+  text-decoration: underline;
+  padding-left: 1rem;
+}
+dd {
+    padding-left: 2.5rem;
+}

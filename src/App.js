@@ -16,6 +16,10 @@ import TABLE_9 from "./pages/01_tables/TABLE_9";
 import LISTS_1 from "./pages/02_lists/LISTS_1";
 import LISTS_2 from "./pages/02_lists/LISTS_2";
 import LISTS_3 from "./pages/02_lists/LISTS_3";
+import LISTS_4 from "./pages/02_lists/LISTS_4";
+import LISTS_5 from "./pages/02_lists/LISTS_5";
+import LISTS_6 from "./pages/02_lists/LISTS_6";
+import LISTS_7 from "./pages/02_lists/LISTS_7";
 // -----------------------------
 import Missing from "./pages/Missing";
 
@@ -59,8 +63,12 @@ const App = () => {
           </Route>
           <Route path="lists">
             <Route index element={<LISTS_1 />} />
-            <Route path="ex_2" element={<LISTS_2 />} />
-            <Route path="ex_3" element={<LISTS_3 />} />
+            <Route path="list-style-type-attrb" element={<LISTS_2 />} />
+            <Route path="list-style-type-prop" element={<LISTS_3 />} />
+            <Route path="nested-list" element={<LISTS_4 />} />
+            <Route path="ordered-list" element={<LISTS_5 />} />
+            <Route path="type-attrb" element={<LISTS_6 />} />
+            <Route path="description-list" element={<LISTS_7 />} />
           </Route>
           <Route path="*" element={<Missing clearH2={clearH2} />} />
           {/* ----------------------------------- */}
