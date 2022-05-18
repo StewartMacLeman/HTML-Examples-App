@@ -31,7 +31,9 @@ li { font-size: 1.5rem; }
 code { font-size: 1.5rem; }
 th, td { font-size: 2rem; }
 dt, dd { font-size: 2rem; }
-
+.small {
+  font-size: 1.25rem;
+}
 h1, h2, h3, p, span, li, th, td, dt, dd {
   font-family: verdana, helvetica, sans-serif;
   text-align: center;

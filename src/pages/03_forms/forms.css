@@ -27,9 +27,6 @@ label, input {
     margin: .25rem auto;
     padding: .15rem;
 }
-.small {
-    font-size: 1.25rem;
-}
 input[type="submit"] {
     width: 60%;
     font-weight: bold;

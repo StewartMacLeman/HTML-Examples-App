@@ -35,6 +35,9 @@ import FORMS_11 from "./pages/03_forms/FORMS_11";
 import FORMS_12 from "./pages/03_forms/FORMS_12";
 import FORMS_13 from "./pages/03_forms/FORMS_13";
 // -----------------------------
+import IMAGES_1 from "./pages/04_images/IMAGES_1";
+import IMAGES_2 from "./pages/04_images/IMAGES_2";
+// -----------------------------
 import Missing from "./pages/Missing";
 
 const App = () => {
@@ -98,6 +101,10 @@ const App = () => {
             <Route path="select-option" element={<FORMS_11 />} />
             <Route path="input-datalist" element={<FORMS_12 />} />
             <Route path="fieldset-legend" element={<FORMS_13 />} />
+          </Route>
+          <Route path="images">
+            <Route index element={<IMAGES_1 />} />
+            <Route path="bgImage-property" element={<IMAGES_2 />} />
           </Route>
           <Route path="*" element={<Missing clearH2={clearH2} />} />
           {/* ----------------------------------- */}
