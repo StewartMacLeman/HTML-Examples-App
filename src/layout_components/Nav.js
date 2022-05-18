@@ -4,6 +4,7 @@ import TablesNav from "./nav_sections/TablesNav";
 import ListsNav from "./nav_sections/ListsNav";
 import FormsNav from "./nav_sections/FormsNav";
 import ImagesNav from "./nav_sections/ImagesNav";
+import MiscNav from "./nav_sections/MiscNav";
 
 const Nav = ({ getTitles, clearH2 }) => {
   return (
@@ -18,6 +19,7 @@ const Nav = ({ getTitles, clearH2 }) => {
         <ListsNav getTitles={getTitles} />
         <FormsNav getTitles={getTitles} />
         <ImagesNav getTitles={getTitles} />
+        <MiscNav getTitles={getTitles} />
       </nav>
     </aside>
   );

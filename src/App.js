@@ -38,6 +38,14 @@ import FORMS_13 from "./pages/03_forms/FORMS_13";
 import IMAGES_1 from "./pages/04_images/IMAGES_1";
 import IMAGES_2 from "./pages/04_images/IMAGES_2";
 // -----------------------------
+import MISC_1 from "./pages/05_Miscellaneous/MISC_1";
+import MISC_2 from "./pages/05_Miscellaneous/MISC_2";
+import MISC_3 from "./pages/05_Miscellaneous/MISC_3";
+import MISC_4 from "./pages/05_Miscellaneous/MISC_4";
+import MISC_5 from "./pages/05_Miscellaneous/MISC_5";
+import MISC_6 from "./pages/05_Miscellaneous/MISC_6";
+import MISC_7 from "./pages/05_Miscellaneous/MISC_7";
+// -----------------------------
 import Missing from "./pages/Missing";
 
 const App = () => {
@@ -105,6 +113,15 @@ const App = () => {
           <Route path="images">
             <Route index element={<IMAGES_1 />} />
             <Route path="bgImage-property" element={<IMAGES_2 />} />
+          </Route>
+          <Route path="misc">
+            <Route index element={<MISC_1 />} />
+            <Route path="mark-tag" element={<MISC_2 />} />
+            <Route path="q-tag" element={<MISC_3 />} />
+            <Route path="blockquote-tag" element={<MISC_4 />} />
+            <Route path="cite-tag" element={<MISC_5 />} />
+            <Route path="bdo-tag" element={<MISC_6 />} />
+            <Route path="abbr-tag" element={<MISC_7 />} />
           </Route>
           <Route path="*" element={<Missing clearH2={clearH2} />} />
           {/* ----------------------------------- */}

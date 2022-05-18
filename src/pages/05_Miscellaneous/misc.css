@@ -1,0 +1,33 @@
+.vertMargin {
+    margin: 1rem auto;
+}
+del {
+    color: red;
+}
+mark {
+    text-decoration: underline;
+}
+q {
+    font-style: italic;
+}
+blockquote {
+    font-size: 1.5rem;
+    font-family: verdana, helvetica, sans-serif;
+    text-align: center;
+    margin: .25rem auto;
+    padding: .15rem;
+}
+cite {
+    text-decoration: underline;
+}
+bdo {
+    font-size: 2rem;
+    font-family: verdana, helvetica, sans-serif;
+    text-align: center;
+    margin: .25rem auto;
+    padding: .15rem;
+    display: block;
+}
+abbr {
+    font-weight: bold;
+}
