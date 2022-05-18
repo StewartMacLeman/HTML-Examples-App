@@ -21,7 +21,7 @@ const ListsNav = ({ getTitles }) => {
         <Link to="lists/ordered-list">Ordered List</Link>
       </li>
       <li onClick={getTitles}>
-        <Link to="lists/type-attrb">Type Attrb.</Link>
+        <Link to="lists/type-attrb">type Attrb.</Link>
       </li>
       <li onClick={getTitles}>
         <Link to="lists/description-list">Description List</Link>

@@ -24,7 +24,7 @@ h1 { font-size: 3rem; }
 h2 { font-size: 2.5rem; }
 h3 { font-size: 2.15rem; }
 p { font-size: 2rem; }
-/* label, input { font-size: 2rem; } */
+/* label, input { font-size: 1.5rem; } */
 /* span { font-size: 1.5rem; } */
 button { font-size: 1.5rem; }
 li { font-size: 1.5rem; }
@@ -32,7 +32,7 @@ code { font-size: 1.5rem; }
 th, td { font-size: 2rem; }
 dt, dd { font-size: 2rem; }
 
-h1, h2, h3, p, label, input, span, li, th, td, dt, dd {
+h1, h2, h3, p, span, li, th, td, dt, dd {
   font-family: verdana, helvetica, sans-serif;
   text-align: center;
   margin: 0 auto;

@@ -21,6 +21,20 @@ import LISTS_5 from "./pages/02_lists/LISTS_5";
 import LISTS_6 from "./pages/02_lists/LISTS_6";
 import LISTS_7 from "./pages/02_lists/LISTS_7";
 // -----------------------------
+import FORMS_1 from "./pages/03_forms/FORMS_1";
+import FORMS_2 from "./pages/03_forms/FORMS_2";
+import FORMS_3 from "./pages/03_forms/FORMS_3";
+import FORMS_4 from "./pages/03_forms/FORMS_4";
+import FORMS_5 from "./pages/03_forms/FORMS_5";
+import FORMS_6 from "./pages/03_forms/FORMS_6";
+import FORMS_7 from "./pages/03_forms/FORMS_7";
+import FORMS_8 from "./pages/03_forms/FORMS_8";
+import FORMS_9 from "./pages/03_forms/FORMS_9";
+import FORMS_10 from "./pages/03_forms/FORMS_10";
+import FORMS_11 from "./pages/03_forms/FORMS_11";
+import FORMS_12 from "./pages/03_forms/FORMS_12";
+import FORMS_13 from "./pages/03_forms/FORMS_13";
+// -----------------------------
 import Missing from "./pages/Missing";
 
 const App = () => {
@@ -69,6 +83,21 @@ const App = () => {
             <Route path="ordered-list" element={<LISTS_5 />} />
             <Route path="type-attrb" element={<LISTS_6 />} />
             <Route path="description-list" element={<LISTS_7 />} />
+          </Route>
+          <Route path="forms">
+            <Route index element={<FORMS_1 />} />
+            <Route path="autofocus-attrb" element={<FORMS_2 />} />
+            <Route path="value-attrb" element={<FORMS_3 />} />
+            <Route path="placeholder-attrb" element={<FORMS_4 />} />
+            <Route path="autocomplete-attrb" element={<FORMS_5 />} />
+            <Route path="disabled-attrb" element={<FORMS_6 />} />
+            <Route path="input-hidden" element={<FORMS_7 />} />
+            <Route path="input-radio" element={<FORMS_8 />} />
+            <Route path="input-checkbox" element={<FORMS_9 />} />
+            <Route path="textarea" element={<FORMS_10 />} />
+            <Route path="select-option" element={<FORMS_11 />} />
+            <Route path="input-datalist" element={<FORMS_12 />} />
+            <Route path="fieldset-legend" element={<FORMS_13 />} />
           </Route>
           <Route path="*" element={<Missing clearH2={clearH2} />} />
           {/* ----------------------------------- */}
