@@ -12,9 +12,8 @@
 .imageContainerTwo {
     margin: 1rem auto;
     width: 65%;
-    height: 17rem;
+    height: 18rem;
     border: .15rem solid black;
     background-image: url("images/travels_NZ_2.JPG");
     background-size: cover;
-
 }

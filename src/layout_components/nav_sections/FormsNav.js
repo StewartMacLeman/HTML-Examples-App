@@ -1,48 +1,49 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const FormsNav = ({ getTitles }) => {
+  const active = ({ isActive }) => isActive ? "active" : "";
   return (
     <ul>
       <li className="topic subtitle">Forms</li>
       <li onClick={getTitles}>
-        <Link to="forms">Input type="text"</Link>
+        <NavLink to="forms/input-text" className={active}>Input type="text"</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="forms/autofocus-attrb">autofocus Attrb.</Link>
+        <NavLink to="forms/autofocus-attrb" className={active}>autofocus Attrb.</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="forms/value-attrb">value Attrb.</Link>
+        <NavLink to="forms/value-attrb" className={active}>value Attrb.</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="forms/placeholder-attrb">placeholder Attrb.</Link>
+        <NavLink to="forms/placeholder-attrb" className={active}>placeholder Attrb.</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="forms/autocomplete-attrb">autocomplete Attrb.</Link>
+        <NavLink to="forms/autocomplete-attrb" className={active}>autocomplete Attrb.</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="forms/disabled-attrb">disabled Attrb.</Link>
+        <NavLink to="forms/disabled-attrb" className={active}>disabled Attrb.</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="forms/input-hidden">Input type="hidden"</Link>
+        <NavLink to="forms/input-hidden" className={active}>Input type="hidden"</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="forms/input-radio">Input type="radio"</Link>
+        <NavLink to="forms/input-radio" className={active}>Input type="radio"</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="forms/input-checkbox">Input type="checkbox"</Link>
+        <NavLink to="forms/input-checkbox" className={active}>Input type="checkbox"</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="forms/textarea">Textarea</Link>
+        <NavLink to="forms/textarea" className={active}>Textarea</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="forms/select-option">Select &amp; Option</Link>
+        <NavLink to="forms/select-option" className={active}>Select &amp; Option</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="forms/input-datalist">Input &amp; Datalist</Link>
+        <NavLink to="forms/input-datalist" className={active}>Input &amp; Datalist</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="forms/fieldset-legend">Fieldset &amp; Legend</Link>
+        <NavLink to="forms/fieldset-legend" className={active}>Fieldset &amp; Legend</NavLink>
       </li>
     </ul>
   );

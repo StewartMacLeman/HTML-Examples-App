@@ -55,12 +55,15 @@ const App = () => {
   const clearH2 = () => {
     setTopic("");
     setSubTopic("");
-  }
+  };
 
   const getTitles = (e) => {
-    let itemClicked = e.target
-    let topicSelected = itemClicked.parentElement.parentElement.querySelector(".topic").textContent;
-    let subTopicSelected = itemClicked.textContent
+    let itemClicked = e.target;
+    let topicSelected =
+      itemClicked.parentElement.parentElement.querySelector(
+        ".topic"
+      ).textContent;
+    let subTopicSelected = itemClicked.textContent;
     // ---------------------------
     // console.log(itemClicked);
     // console.log(topicSelected);
@@ -68,14 +71,37 @@ const App = () => {
     // ---------------------------
     setTopic(topicSelected + ": ");
     setSubTopic(subTopicSelected);
-  }
+  };
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout topic={topic} subTopic={subTopic} getTitles={getTitles} clearH2={clearH2} />}>
-        {/* ----------------------------- */}
+        <Route
+          path="/"
+          element={
+            <Layout
+              topic={topic}
+              subTopic={subTopic}
+              getTitles={getTitles}
+              clearH2={clearH2}
+            />
+          }
+        >
+          {/* ----------------------------- */}
           <Route index element={<Home />} />
-          <Route path="tables">
+          {/* ----------------------------- */}
+          <Route path="tables/missing_th_tags" element={<TABLE_1 />} />
+          <Route path="tables/with_th_tags" element={<TABLE_2 />} />
+          <Route path="tables/cell_borders" element={<TABLE_3 />} />
+          <Route path="tables/border_collapse" element={<TABLE_4 />} />
+          <Route path="tables/colspan" element={<TABLE_5 />} />
+          <Route path="tables/rowspan" element={<TABLE_6 />} />
+          <Route path="tables/colgroup" element={<TABLE_7 />} />
+          <Route path="tables/caption" element={<TABLE_8 />} />
+          <Route path="tables/semantics" element={<TABLE_9 />} />
+          {/* ----------------------------- */}
+          {/* Issue with using an active psuedo-class; the index element is always selected.*/}
+          {/* Original set-up shown below for reference. */}
+          {/* <Route path="tables/*">
             <Route index element={<TABLE_1 />} />
             <Route path="with_th_tags" element={<TABLE_2 />} />
             <Route path="cell_borders" element={<TABLE_3 />} />
@@ -85,46 +111,43 @@ const App = () => {
             <Route path="colgroup" element={<TABLE_7 />} />
             <Route path="caption" element={<TABLE_8 />} />
             <Route path="semantics" element={<TABLE_9 />} />
-          </Route>
-          <Route path="lists">
-            <Route index element={<LISTS_1 />} />
-            <Route path="list-style-type-attrb" element={<LISTS_2 />} />
-            <Route path="list-style-type-prop" element={<LISTS_3 />} />
-            <Route path="nested-list" element={<LISTS_4 />} />
-            <Route path="ordered-list" element={<LISTS_5 />} />
-            <Route path="type-attrb" element={<LISTS_6 />} />
-            <Route path="description-list" element={<LISTS_7 />} />
-          </Route>
-          <Route path="forms">
-            <Route index element={<FORMS_1 />} />
-            <Route path="autofocus-attrb" element={<FORMS_2 />} />
-            <Route path="value-attrb" element={<FORMS_3 />} />
-            <Route path="placeholder-attrb" element={<FORMS_4 />} />
-            <Route path="autocomplete-attrb" element={<FORMS_5 />} />
-            <Route path="disabled-attrb" element={<FORMS_6 />} />
-            <Route path="input-hidden" element={<FORMS_7 />} />
-            <Route path="input-radio" element={<FORMS_8 />} />
-            <Route path="input-checkbox" element={<FORMS_9 />} />
-            <Route path="textarea" element={<FORMS_10 />} />
-            <Route path="select-option" element={<FORMS_11 />} />
-            <Route path="input-datalist" element={<FORMS_12 />} />
-            <Route path="fieldset-legend" element={<FORMS_13 />} />
-          </Route>
-          <Route path="images">
-            <Route index element={<IMAGES_1 />} />
-            <Route path="bgImage-property" element={<IMAGES_2 />} />
-          </Route>
-          <Route path="misc">
-            <Route index element={<MISC_1 />} />
-            <Route path="mark-tag" element={<MISC_2 />} />
-            <Route path="q-tag" element={<MISC_3 />} />
-            <Route path="blockquote-tag" element={<MISC_4 />} />
-            <Route path="cite-tag" element={<MISC_5 />} />
-            <Route path="bdo-tag" element={<MISC_6 />} />
-            <Route path="abbr-tag" element={<MISC_7 />} />
-          </Route>
+          </Route> */}
+          {/* ----------------------------- */}
+          <Route path="lists/unordered-list" element={<LISTS_1 />} />
+          <Route path="lists/list-style-type-attrb" element={<LISTS_2 />} />
+          <Route path="lists/list-style-type-prop" element={<LISTS_3 />} />
+          <Route path="lists/nested-list" element={<LISTS_4 />} />
+          <Route path="lists/ordered-list" element={<LISTS_5 />} />
+          <Route path="lists/type-attrb" element={<LISTS_6 />} />
+          <Route path="lists/description-list" element={<LISTS_7 />} />
+          {/* ----------------------------- */}
+          <Route path="forms/input-text" element={<FORMS_1 />} />
+          <Route path="forms/autofocus-attrb" element={<FORMS_2 />} />
+          <Route path="forms/value-attrb" element={<FORMS_3 />} />
+          <Route path="forms/placeholder-attrb" element={<FORMS_4 />} />
+          <Route path="forms/autocomplete-attrb" element={<FORMS_5 />} />
+          <Route path="forms/disabled-attrb" element={<FORMS_6 />} />
+          <Route path="forms/input-hidden" element={<FORMS_7 />} />
+          <Route path="forms/input-radio" element={<FORMS_8 />} />
+          <Route path="forms/input-checkbox" element={<FORMS_9 />} />
+          <Route path="forms/textarea" element={<FORMS_10 />} />
+          <Route path="forms/select-option" element={<FORMS_11 />} />
+          <Route path="forms/input-datalist" element={<FORMS_12 />} />
+          <Route path="forms/fieldset-legend" element={<FORMS_13 />} />
+          {/* ----------------------------- */}
+          <Route path="images/src-attrb" element={<IMAGES_1 />} />
+          <Route path="images/bgImage-property" element={<IMAGES_2 />} />
+          {/* ----------------------------- */}
+          <Route path="misc/del-tag" element={<MISC_1 />} />
+          <Route path="misc/mark-tag" element={<MISC_2 />} />
+          <Route path="misc/q-tag" element={<MISC_3 />} />
+          <Route path="misc/blockquote-tag" element={<MISC_4 />} />
+          <Route path="misc/cite-tag" element={<MISC_5 />} />
+          <Route path="misc/bdo-tag" element={<MISC_6 />} />
+          <Route path="misc/abbr-tag" element={<MISC_7 />} />
+          {/* ----------------------------- */}
           <Route path="*" element={<Missing clearH2={clearH2} />} />
-          {/* ----------------------------------- */}
+          {/* ------------------------------ */}
         </Route>
       </Routes>
     </>

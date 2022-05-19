@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import TablesNav from "./nav_sections/TablesNav";
 import ListsNav from "./nav_sections/ListsNav";
 import FormsNav from "./nav_sections/FormsNav";
@@ -7,12 +7,13 @@ import ImagesNav from "./nav_sections/ImagesNav";
 import MiscNav from "./nav_sections/MiscNav";
 
 const Nav = ({ getTitles, clearH2 }) => {
+  const active = ({ isActive }) => isActive ? "active" : "";
   return (
     <aside className="navAside">
       <nav className="nav">
         <ul>
           <li className="topic subtitle" onClick={clearH2}>
-            <Link to="/">Home</Link>
+            <NavLink to="/" className={active}>Home</NavLink>
           </li>
         </ul>
         <TablesNav getTitles={getTitles} />

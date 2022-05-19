@@ -1,36 +1,37 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import {NavLink} from "react-router-dom"
 
 const TablesNav = ({getTitles}) => {
+  const active = ({ isActive }) => isActive ? "active" : "";
   return (
     <ul>
       <li className="topic subtitle">Tables</li>
       <li onClick={getTitles}>
-        <Link to="tables">Missing th tags</Link>
+        <NavLink to="tables/missing_th_tags" className={active}>Missing th tags</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="tables/with_th_tags">With th tags</Link>
+        <NavLink to="tables/with_th_tags" className={active}>With th tags</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="tables/cell_borders">Cell Borders</Link>
+        <NavLink to="tables/cell_borders" className={active}>Cell Borders</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="tables/border_collapse">Border Collapse</Link>
+        <NavLink to="tables/border_collapse" className={active}>Border Collapse</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="tables/colspan">Using Colspan</Link>
+        <NavLink to="tables/colspan" className={active}>Using Colspan</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="tables/rowspan">Using Rowspan</Link>
+        <NavLink to="tables/rowspan" className={active}>Using Rowspan</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="tables/colgroup">Using Colgroup</Link>
+        <NavLink to="tables/colgroup" className={active}>Using Colgroup</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="tables/caption">Using a Caption</Link>
+        <NavLink to="tables/caption" className={active}>Using a Caption</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="tables/semantics">Semantic Sections</Link>
+        <NavLink to="tables/semantics" className={active}>Semantic Sections</NavLink>
       </li>
     </ul>
   );

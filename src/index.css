@@ -101,7 +101,6 @@ button:hover {
 }
 .nav ul li a {
   display: block;
-  width: 100%;
   text-decoration: none;
   color: black;
 }
@@ -109,14 +108,14 @@ button:hover {
   background-color: var(--palegreen);
   cursor: pointer;
 }
-.nav ul li a:active {
+/* Used within the NavLinks! */
+.active {
   background-color: var(--palegreen);
 }
 /* Main styles. ---------------------------------------------- */
 .main {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-  /* border: 0.15rem solid red; */
   padding: .25rem;
   padding-left: .75rem;
   overflow-y: scroll;
@@ -129,6 +128,46 @@ button:hover {
 }
 .main pre {
   margin: 0 auto;
+}
+/* Home page styles. ----------------------------------------- */
+.homeList {
+  list-style-type: none;
+  padding-left: 0.15rem;
+}
+.homeList li {
+  text-align: left;
+}
+.underline {
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+.smallerText { 
+  font-size: 1.5rem; 
+}
+.smallerText::after, .smallerText::before {
+  content: "**";
+}
+/* Missing page styles. -------------------------------------- */
+.missing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.missing button {
+  width: 60%;
+  margin-top: 2rem;
+  padding: 0;
+}
+.missing button a {
+  font-size: 2rem;
+  text-decoration: none;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: white;
+  display: block;
+}
+.missing button a:hover {
+  color: black;
 }
 /* Footer styles. -------------------------------------------- */
 .footer {
