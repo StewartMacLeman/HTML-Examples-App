@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const MiscNav = ({ getTitles }) => {
   const active = ({ isActive }) => isActive ? "active" : "";
@@ -7,25 +7,25 @@ const MiscNav = ({ getTitles }) => {
     <ul>
       <li className="topic subtitle">Misc.</li>
       <li onClick={getTitles}>
-        <Link to="misc/del-tag" className={active}>The del tag</Link>
+        <NavLink to="misc/del-tag" className={active}>The del tag</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="misc/mark-tag" className={active}>The mark tag</Link>
+        <NavLink to="misc/mark-tag" className={active}>The mark tag</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="misc/q-tag" className={active}>The q tag</Link>
+        <NavLink to="misc/q-tag" className={active}>The q tag</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="misc/blockquote-tag" className={active}>blockquote tag</Link>
+        <NavLink to="misc/blockquote-tag" className={active}>blockquote tag</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="misc/cite-tag" className={active}>cite tag</Link>
+        <NavLink to="misc/cite-tag" className={active}>cite tag</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="misc/bdo-tag" className={active}>Bi-Directional Override tag</Link>
+        <NavLink to="misc/bdo-tag" className={active}>Bi-Directional Override tag</NavLink>
       </li>
       <li onClick={getTitles}>
-        <Link to="misc/abbr-tag" className={active}>The abbr tag</Link>
+        <NavLink to="misc/abbr-tag" className={active}>The abbr tag</NavLink>
       </li>
     </ul>
   );

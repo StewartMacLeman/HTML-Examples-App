@@ -1,0 +1,59 @@
+.navDiv {
+    width: 85%;
+    margin: 1rem auto;
+}
+.navEx1, .navEx2, .navEx3, .navEx4 {
+    border: .15rem solid black;
+    width: 100%;
+    margin: 1rem auto;
+    background-color: lightgrey;
+}
+.navEx1 ul, .navEx2 ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.navEx2 ul {
+    text-align: center;
+}
+.navEx2 li {
+    display: inline-block;
+}
+.navEx3 ul, .navEx4 ul {
+    margin: 0;
+    padding: 0 4rem;
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+.navEx4 ul {
+    padding: 0;
+}
+.navEx4 ul li.keepLeft {
+    margin-right: 5rem;
+}
+.navEx1 span, 
+.navEx2 span, 
+.navEx3 span, 
+.navEx4 span {
+    font-family: verdana, helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: tomato; 
+    text-decoration: none;
+    display: block;
+    padding: .5rem 1rem;
+}
+.navEx1 span:hover, 
+.navEx2 span:hover, 
+.navEx3 span:hover, 
+.navEx4 span:hover {
+    background-color: blueviolet;
+}
+/* Media Queries ---------------------------------- */
+@media screen and (max-width: 400px){
+    .navEx4 ul li.keepLeft {
+        margin-right: 2.8rem;
+    }
+}

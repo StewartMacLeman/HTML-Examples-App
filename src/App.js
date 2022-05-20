@@ -38,13 +38,18 @@ import FORMS_13 from "./pages/03_forms/FORMS_13";
 import IMAGES_1 from "./pages/04_images/IMAGES_1";
 import IMAGES_2 from "./pages/04_images/IMAGES_2";
 // -----------------------------
-import MISC_1 from "./pages/05_Miscellaneous/MISC_1";
-import MISC_2 from "./pages/05_Miscellaneous/MISC_2";
-import MISC_3 from "./pages/05_Miscellaneous/MISC_3";
-import MISC_4 from "./pages/05_Miscellaneous/MISC_4";
-import MISC_5 from "./pages/05_Miscellaneous/MISC_5";
-import MISC_6 from "./pages/05_Miscellaneous/MISC_6";
-import MISC_7 from "./pages/05_Miscellaneous/MISC_7";
+import NAV_1 from "./pages/05_Navigation/NAV_1";
+import NAV_2 from "./pages/05_Navigation/NAV_2";
+import NAV_3 from "./pages/05_Navigation/NAV_3";
+import NAV_4 from "./pages/05_Navigation/NAV_4";
+// -----------------------------
+import MISC_1 from "./pages/06_Miscellaneous/MISC_1";
+import MISC_2 from "./pages/06_Miscellaneous/MISC_2";
+import MISC_3 from "./pages/06_Miscellaneous/MISC_3";
+import MISC_4 from "./pages/06_Miscellaneous/MISC_4";
+import MISC_5 from "./pages/06_Miscellaneous/MISC_5";
+import MISC_6 from "./pages/06_Miscellaneous/MISC_6";
+import MISC_7 from "./pages/06_Miscellaneous/MISC_7";
 // -----------------------------
 import Missing from "./pages/Missing";
 
@@ -137,6 +142,11 @@ const App = () => {
           {/* ----------------------------- */}
           <Route path="images/src-attrb" element={<IMAGES_1 />} />
           <Route path="images/bgImage-property" element={<IMAGES_2 />} />
+          {/* ----------------------------- */}
+          <Route path="nav/vertical-nav" element={<NAV_1 />} />
+          <Route path="nav/horizontal-nav" element={<NAV_2 />} />
+          <Route path="nav/flexbox-ex1" element={<NAV_3 />} />
+          <Route path="nav/flexbox-ex2" element={<NAV_4 />} />
           {/* ----------------------------- */}
           <Route path="misc/del-tag" element={<MISC_1 />} />
           <Route path="misc/mark-tag" element={<MISC_2 />} />
